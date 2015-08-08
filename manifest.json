@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Dank Revolution",
+  "description": "Revolutionize your browser with dank memes",
+  "version": "0.1",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*.whatsapp.com/*", "*://*.facebook.com/*", "*://*.twitter.com/*", "*://*.messenger.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }]
+}
