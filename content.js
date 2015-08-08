@@ -79,7 +79,7 @@ function replaceRegex(node) {
 
     for (var i = 0; i < len; i++) {
       word = split[i];
-      if (word in imageMap && imageMap[word] !== undefined) {
+      if (word in imageMap && typeof imageMap[word] === 'string') {
         var url = imageMap[word];
         found = true;
         img = document.createElement('img');
